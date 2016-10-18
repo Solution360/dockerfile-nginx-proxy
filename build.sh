@@ -1,0 +1,1 @@
+docker build -t solution360/nginx-proxy .
