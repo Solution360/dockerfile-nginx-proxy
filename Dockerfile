@@ -4,4 +4,7 @@ RUN { \
       echo 'proxy_send_timeout 600;'; \
       echo 'proxy_read_timeout 600;'; \
       echo 'send_timeout 600;'; \
+      echo 'proxy_set_header X-Forwarded-Host $http_host;'; \
+      echo 'proxy_set_header HTTPS $https;'; \
+      echo 'proxy_pass_request_headers on;'; \
     } > /etc/nginx/conf.d/my_proxy.conf
